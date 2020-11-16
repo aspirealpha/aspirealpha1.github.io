@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Playfair+Display:wght@400;800&display=swap');
+
+:root {
+    --headingFontFamily: 'Playfair Display', serif;
+    --paragraphFontFamily: 'Josefin Sans', sans-serif;
+
+    --fontSize16: 16px;
+    --fontSize18: 18px;
+    --fontSize20: 20px;
+    --fontSize24: 24px;
+    --fontSize30: 30px;
+    --fontSize40: 40px;
+    --fontSize50:50px;
+
+    --primaryColor: #eb8927;
+    --whiteColor: #ffffff;
+}
+*{
+    font-family: var(--paragraphFontFamily);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headingFontFamily);
+}
+p{
+    font-size: var(--fontSize20);
+    
+}
+
+h3{
+    font-size: var(--fontSize40);
+    font-weight: 600;
+    letter-spacing: 10px;
+}
+
+h6{
+    font-size: 18px;
+    font-family: var(--paragraphFontFamily);
+    letter-spacing: 3px;
+    color: var(--primaryColor);
+    font-weight: 600;
+}
+ul{
+    padding-left: 20px;
+}
+
+a{
+    color: var(--whiteColor);
+}
+a:active, a:hover, a:focus{
+    color: var(--primaryColor);
+    text-decoration: none;
+}
+.content-section{
+    padding: 80px 0px 100px;
+}
+
+
+/* Header section */
+
+.navbar-dark .navbar-nav .nav-link{
+    font-size: var(--fontSize20);
+    color: var(--whiteColor);
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--primaryColor);
+}
+.headerInfo{
+    background-color:var(--primaryColor);
+    padding: 5px 0;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+/* End - Header section  */
+
+/* about thumbnails effects*/
+.aboutHoverEffect{
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+.aboutHoverEffect img{ 
+    filter: grayscale(90%);
+}
+.aboutHoverEffect .aboutHoverEffect-overlay p{
+    font-size: var(--fontSize18);
+    padding: 10px;
+    color: var(--whiteColor);
+}
+.aboutHoverEffect .aboutHoverEffect-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgb(109 86 0 / 62%); */
+    padding-top:202px;
+    transition: all .3s ease-out 0s;
+}
+.aboutHoverEffect .aboutHoverEffect-overlay h4{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(235 137 39),rgba(255,0,0,0));
+    color: var(--whiteColor);
+    padding: 5px 0;
+}
+.aboutHoverEffect:hover .aboutHoverEffect-overlay{
+    padding-top: 0;
+    background-color: rgb(0 0 0 / 73%)
+}
+/* End - about thumbnails effects*/
+
+
+/* services section*/
+.servicesThumbNail div{
+    color: var(--primaryColor);
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: var(--whiteColor);
+    border-radius: 50%;
+    position: relative;
+    border: 8px solid #f2f2f2;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.servicesThumbNail h4{
+    color: var(--primaryColor);
+    font-size: var(--fontSize24);
+}
+.servicesThumbNail p{
+    font-size: var(--fontSize16);
+}
+.servicesThumbNail div i{
+    font-size: var(--fontSize30);
+    left: 0;
+    margin-top: 15px;
+} 
+.servicesThumbNail:hover div{
+    color: var(--whiteColor);
+    border: 8px solid #f2f2f2;
+    background-color: var(--primaryColor);
+    transition: all .5s ease-out 0s;
+}
+
+/* End - services section*/
+
+/* contact section */
+.contact-section{
+    background-image: url(./images/footer-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    color: var(--whiteColor);
+}
+.contact-section .footer-overlay{
+    background-color: #191919e6;
+    padding-top: 100px;
+}
+.contact-section h4{
+    color: var(--whiteColor);
+    font-size: var(--fontSize24);
+    font-family: var(--headingFontFamily);
+    margin-bottom: 20px;
+}
+.contact-section .copyright{
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+.contact-section p{
+    font-size: var(--fontSize16);
+    margin-top: 30px;
+}
+/* End contact section */
+
+/* mobile styles */
+@media (max-width:600px){
+    .content-section {
+        padding: 30px 0px 30px;
+    }
+    h3{
+        font-size: var(--fontSize30);
+        letter-spacing: 5px;
+    }
+    p {
+            font-size: var(--fontSize16);
+    }
+    .carousel-caption h3{
+        font-size: var(--fontSize20);
+            font-weight: 600;
+            letter-spacing: 2px;
+    }
+    .carousel-caption p{
+        display: none;
+    }
+    .contact-section .footer-overlay{
+        padding-top: 50px;
+    }
+    .text-center-inMobile{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .text-center-inMobile ul{
+        padding: 0;
+    }
+    .text-center-inMobile li{
+        list-style-type: none;
+    }
+    .contact-section .copyright{
+        margin-top: 10px;
+    }
+}
+/* EEnd - mobile styles */
